@@ -1,6 +1,27 @@
 class Api::EventsController < ApplicationController
   def index
     @events = Event.all
+
+    venue_search = params[:venue_id]
+    if venue_search
+      @events = @events.where(venue_id: venue_search)
+    end
+
+    name_search = params[:name]
+    if name_search
+      @events = @events.where("name ILIKE ?", "%#{name_search}%")
+    end
+
+    description_search = params[:description]
+    if description_search
+      @events = @events.where("description ILIKE ?", "%#{description_search}%")
+    end
+
+    producer_search = params[:user_id]
+    if producer_search
+      @events = @events.where(user_id: producer_search)
+    end    
+
     render "index.json.jbuilder"
   end
 
