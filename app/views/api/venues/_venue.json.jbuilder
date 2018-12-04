@@ -1,0 +1,11 @@
+json.id venue.id
+json.name  venue.name 
+json.address venue.address
+json.city venue.city
+json.state venue.state
+json.zip venue.zip
+json.website venue.website
+json.contact venue.contact
+json.email venue.email
+json.phone venue.phone
+json.capacity venue.capacity

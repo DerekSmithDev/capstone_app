@@ -1,0 +1,1 @@
+json.partial! "venue.json.jbuilder", venue: @venue
