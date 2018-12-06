@@ -78,3 +78,4 @@ ticket = Ticket.create!(event_id: 2, price: 107.68)
 ticket = Ticket.create!(event_id: 5, price: 52.7)
 ticket = Ticket.create!(event_id: 7, price: 33.05)
 ticket = Ticket.create!(event_id: 9, price: 72.85)
+

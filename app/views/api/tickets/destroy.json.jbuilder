@@ -1,0 +1,1 @@
+json.Deleted_ticket @input_id

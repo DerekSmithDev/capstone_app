@@ -1,0 +1,1 @@
+json.partial! "ticket.json.jbuilder", ticket: @ticket
