@@ -17,6 +17,8 @@ Rails.application.routes.draw do
     # post"/tickets" => "tickets#create"
     # get"/tickets/:id" => "tickets#show"
     # patch"/tickets/:id" => "tickets#update"
-    # delete"/tickets/:id" => "tickets#destroy"    
+    # delete"/tickets/:id" => "tickets#destroy"
+
+    post"/users" => "users#create"    
   end
 end
