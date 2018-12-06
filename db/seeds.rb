@@ -180,3 +180,5 @@ user = User.create!(name: 'Burke', email: 'burke@email.com', password: 'password
 user = User.create!(name: 'Kristen', email: 'kristen@email.com', password: 'password', password_confirmation: 'password')
 user = User.create!(name: 'Wanda', email: 'wanda@email.com', password: 'password', password_confirmation: 'password')
 user = User.create!(name: 'Jena', email: 'jena@email.com', password: 'password', password_confirmation: 'password')
+
+
