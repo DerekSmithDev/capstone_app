@@ -1,6 +1,63 @@
 class Api::VenuesController < ApplicationController
   def index
     @venues = Venue.all
+    
+    id_search = params[:id]
+    if id_search
+      @venues = @venues.where(id: id_search)
+    end
+
+    name_search = params[:name]
+    if name_search
+      @venues = @venues.where("name ILIKE ?", "%#{name_search}%")
+    end
+
+    address_search = params[:address]
+    if address_search
+      @venues = @venues.where("address ILIKE ?", "%#{address_search}%")
+    end
+
+    city_search = params[:city]
+    if city_search
+      @venues = @venues.where("city ILIKE ?", "%#{city_search}%")
+    end
+
+    state_search = params[:state]
+    if state_search
+      @venues = @venues.where("state ILIKE ?", "%#{state_search}%")
+    end
+
+    zip_search = params[:zip]
+    if zip_search
+      @venues = @venues.where("zip ILIKE ?", "%#{zip_search}%")
+    end
+
+    website_search = params[:website]
+    if website_search
+      @venues = @venues.where("website ILIKE ?", "%#{website_search}%")
+    end
+
+    contact_search = params[:contact]
+    if contact_search
+      @venues = @venues.where("contact ILIKE ?", "%#{contact_search}%")
+    end
+
+    email_search = params[:email]
+    if email_search
+      @venues = @venues.where("email ILIKE ?", "%#{email_search}%")
+    end
+
+    phone_search = params[:phone]
+    if phone_search
+      @venues = @venues.where("phone ILIKE ?", "%#{phone_search}%")
+    end
+
+
+    capacity_search = params[:capacity]
+    if capacity_search
+      @venues = @venues.where("capacity ILIKE ?", "%#{capacity_search}%")
+    end
+
     render "index.json.jbuilder"
   end
 
